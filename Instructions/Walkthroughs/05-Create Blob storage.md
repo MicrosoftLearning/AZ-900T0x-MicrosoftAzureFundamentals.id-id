@@ -1,13 +1,19 @@
 ---
 wts:
-    title: '05 - Membuat penyimpanan blob (5 menit)'
-    module: 'Modul 02 – Layanan Core Azure (Beban Kerja)'
+  title: 05 - Membuat penyimpanan blob (5 mnt)
+  module: Module 02 - Core Azure Services (Workloads)
+ms.openlocfilehash: 554a3eb1c95b354e836fe22541f00fa1eb0bc2de
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: id-ID
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137908092"
 ---
-# 05 - Membuat penyimpanan blob (5 menit)
+# <a name="05---create-blob-storage-5-min"></a>05 - Membuat penyimpanan blob (5 mnt)
 
 Dalam panduan ini, kita akan membuat akun penyimpanan, lalu bekerja dengan file penyimpanan blob.
 
-# Tugas 1: Membuat akun penyimpanan 
+# <a name="task-1-create-a-storage-account"></a>Tugas 1: Membuat akun penyimpanan 
 
 Dalam tugas ini, kita akan membuat akun penyimpanan baru. 
 
@@ -15,18 +21,18 @@ Dalam tugas ini, kita akan membuat akun penyimpanan baru.
 
 2. Dari bilah **All services**, cari dan pilih **Storage accounts**, lalu klik **+ Add, + Create, + New**. 
 
-3. Pada tab **Basics** dari bilah **Create storage account**, isi informasi berikut (ganti **xxxx** pada nama akun penyimpanan dengan huruf dan angka sedemikian rupa sehingga namanya unik secara global). Gunakan pengaturan default untuk yang lainnya.
+3. Pada tab **Basics** bilah **Create storage account**, isi informasi berikut (ganti **xxxx** pada nama akun penyimpanan dengan huruf dan angka sedemikian rupa sehingga namanya unik secara global). Gunakan pengaturan default untuk yang lainnya.
 
-    | Setting | Value | 
+    | Pengaturan | Nilai | 
     | --- | --- |
-    | Subscription | **Biarkan seperti default yang ada** |
-    | Resource group | **Buat nama grup sumber daya baru** |
-    | Storage account name | **storageaccountxxxxx** |
-    | Location | **(US) East US**  |
-    | Performance | **Standard** |
-    | Redundancy | **Locally redundant storage (LRS)** |
+    | Langganan | **Biarkan default yang disediakan** |
+    | Grup sumber daya | **Membuat grup sumber daya baru** |
+    | Nama akun penyimpanan | **storageaccountxxxxx** |
+    | Lokasi | **(AS) AS Timur**  |
+    | Performa | **Standard** |
+    | Redundansi | **Penyimpanan redundan secara lokal (LRS)** |
     
-    **Catatan** - Ingatlah untuk mengubah **xxxx** agar menjadi **Nama akun penyimpanan** yang unik
+    **Catatan** - Perlu diingat untuk mengubah **xxxxx** agar menjadi **Nama akun penyimpanan** yang unik
 
 5. Klik **Review + Create** untuk meninjau pengaturan akun penyimpanan Anda dan mengizinkan Azure untuk memvalidasi konfigurasi. 
 
@@ -36,28 +42,28 @@ Dalam tugas ini, kita akan membuat akun penyimpanan baru.
 
     ![Cuplikan layar dari akun penyimpanan yang baru dibuat di portal Microsoft Azure.](../images/0401.png)
 
-# Tugas 2: Bekerja dengan penyimpanan blob
+# <a name="task-2-work-with-blob-storage"></a>Tugas 2: Bekerja dengan penyimpanan blob
 
 Dalam tugas ini, kita akan membuat kontainer Blob dan mengunggah file blob. 
 
-1. Klik nama akun penyimpanan baru, gulir ke bagian **Blob service** di menu sebelah kiri, lalu klik **Containers**.
+1. Klik nama akun penyimpanan baru, gulir ke bagian **Data storage** di menu sebelah kiri, lalu klik **Containers**.
 
 2. Klik **+ Container** dan lengkapi informasinya. Gunakan ikon Informasi untuk mempelajari lebih lanjut. Setelah selesai, klik **Create**.
 
 
-    | Setting | Value |
+    | Pengaturan | Nilai |
     | --- | --- |
-    | Name | **container1**  |
-    | Public access level| **Private (no anonymous access)** |
+    | Nama | **container1**  |
+    | Tingkat akses publik| **Privat (tidak ada akses anonim)** |
   
 
     ![Cuplikan layar dari kontainer blob yang baru dibuat di akun penyimpanan di portal Microsoft Azure.](../images/0402.png)
 
-4. Buka jendela browser baru dan cari **Bing** untuk gambar bunga. Klik kanan gambar itu dan simpanlah ke VM Anda. 
+4. Buka jendela browser yang baru dan cari **Bing** untuk gambar bunga. Klik kanan gambar dan simpanlah ke VM. 
 
 6. Kembali ke Portal, klik **container1**, lalu pilih **Upload**.
 
-5. Telusuri gambar file yang baru Anda simpan di komputer lokal Anda. Pilih gambar itu, lalu pilih unggah.
+5. Cari file gambar yang baru Anda simpan di komputer lokal. Pilih gambar itu, lalu pilih unggah.
 
    
 6. Klik panah **Advanced**, biarkan nilai default tetapi tinjau opsi yang tersedia, lalu klik **Upload**.
@@ -66,18 +72,18 @@ Dalam tugas ini, kita akan membuat kontainer Blob dan mengunggah file blob.
 
 7. Setelah file diunggah, klik kanan pada file dan perhatikan opsi termasuk Tampilkan/edit, Unduh, Properti, dan Hapus. 
 
-8. Jika Anda punya waktu,tinjau opsi untuk File, Tables, dan Queues.
+8. Jika Anda punya waktu, tinjau opsi untuk File, Tables, dan Queues.
 
-# Tugas 3: Memantau akun penyimpanan
+# <a name="task-3-monitor-the-storage-account"></a>Tugas 3: Memantau akun penyimpanan
 
 1. Kembalilah ke bilah akun penyimpanan dan klik **Diagnose and solve problems**. 
 
-2. Jelajahi beberapa masalah penyimpanan paling umum. Perhatikan bahwa ada beberapa pemecah masalah di sini.
+2. Jelajahi beberapa masalah penyimpanan paling umum. Perhatikan bahwa ada beberapa pemecahan masalah di sini.
 
-3. Di bilah akun penyimpanan, gulir ke bawah ke bagian **Monitoring** dan klik **Insights**. Perhatikan bahwa ada informasi tentang Kegagalan, Performa, Ketersediaan, dan Kapasitas. Informasi Anda akan berbeda.
+3. Di bilah akun penyimpanan, gulir turun ke bagian **Monitoring** dan klik **Insights**. Perhatikan bahwa ada informasi tentang Kegagalan, Performa, Ketersediaan, dan Kapasitas. Informasi Anda akan berbeda.
 
     ![Cuplikan layar halaman Wawasan akun penyimpanan.](../images/0403.PNG)
 
 Selamat! Anda telah membuat akun penyimpanan, lalu bekerja dengan blob penyimpanan.
 
-**Catatan**: Untuk menghindari biaya tambahan, Anda dapat secara opsional menghapus grup sumber daya ini. Telusuri grup sumber daya, klik grup sumber daya, lalu klik **Delete resource group**. Verifikasi nama grup sumber daya, lalu klik **Delete**. Pantau **Notifications** untuk melihat bagaimana proses penghapusan.
+**Catatan**: Untuk menghindari biaya tambahan, Anda dapat memilih untuk menghapus grup sumber daya ini. Telusuri grup sumber daya, klik grup sumber daya, lalu klik **Delete resource group**. Verifikasi nama grup sumber daya, lalu klik **Delete**. Pantau **Notifications** untuk melihat bagaimana proses penghapusan.

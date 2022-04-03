@@ -1,16 +1,21 @@
 ---
 wts:
-    title: '03 - Menyebarkan Azure Container Instances (10 menit)'
-    module: 'Modul 02 – Core Azure Services (Beban Kerja)'
+  title: 03 - Menyebarkan Azure Container Instances (10 mnt)
+  module: Module 02 - Core Azure Services (Workloads)
+ms.openlocfilehash: 0616be96840b14f7580c7d2b16cb43b211c6e3a2
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: id-ID
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137908132"
 ---
+# <a name="03---deploy-azure-container-instances-10-min"></a>03 - Menyebarkan Azure Container Instances (10 mnt)
 
-# 03 - Menyebarkan Azure Container Instances (10 menit)
+Dalam panduan ini, kita membuat, mengonfigurasi, dan menyebarkan kontainer menggunakan Azure Container Instances (ACI) di Portal Microsoft Azure. Kontainer adalah aplikasi web Selamat Datang di ACI yang menampilkan halaman HTML statis. 
 
-Dalam panduan ini kita membuat, mengonfigurasi, dan menyebarkan kontainer menggunakan Azure Container Instances (ACI) di Portal Microsoft Azure. Kontainer adalah aplikasi web Selamat Datang di ACI yang menampilkan halaman HTML statis. 
+# <a name="task-1-create-a-container-instance"></a>Tugas 1: Membuat instans kontainer 
 
-# Tugas 1: Membuat instans kontainer 
-
-Dalam tugas ini, kita akan membuat instans kontainer baru untuk aplikasi web. 
+Dalam tugas ini, kita akan membuat instans kontainer baru untuk aplikasi web.  
 
 1. Masuk ke [portal Microsoft Azure](https://portal.azure.com).
 
@@ -18,27 +23,27 @@ Dalam tugas ini, kita akan membuat instans kontainer baru untuk aplikasi web.
 
 3. Berikan detail Dasar berikut untuk instans kontainer baru (biarkan default untuk yang lainnya)): 
 
-	| Setting| Value|
-	|----|----|
-	| Subscription | ***Gunakan default yang ada*** |
-	| Resource group | **Buat nama grup sumber daya baru** |
-	| Container name| **mycontainer**|
-	| Region | **(US) East US** |
-	| Image source| **Docker Hub or other registry**|
-	| Image type| **Public**|
-	| Image| **mcr.microsoft.com/azuredocs/aci-helloworld**|
-	| OS type| **Linux** |
-	| Size| ***Leave at the default***|
+    | Pengaturan| Nilai|
+    |----|----|
+    | Langganan | ***Menggunakan default yang disediakan*** |
+    | Grup sumber daya | **Membuat grup sumber daya baru** |
+    | Nama kontainer| **mycontainer**|
+    | Wilayah | **(AS) AS Timur** |
+    | Sumber gambar| **Docker Hub atau registri lainnya**|
+    | Jenis citra| **Publik**|
+    | Gambar| **mcr.microsoft.com/azuredocs/aci-helloworld**|
+    | Jenis OS| **Linux** |
+    | Ukuran| ***Biarkan di default***|
 
 
 4. Konfigurasikan tab Jaringan (ganti **xxxx** dengan huruf dan angka sehingga namanya unik secara global). Biarkan semua pengaturan lain pada nilai default.
 
-	| Setting| Value|
-	|--|--|
-	| DNS name label| **mycontainerdnsxxxxx** |
+    | Pengaturan| Nilai|
+    |--|--|
+    | Label nama DNS| **mycontainerdnsxxxxx** |
 
-	
-	**Catatan**: Kontainer Anda akan dapat dijangkau publik di dns-name-label.region.azurecontainer.io. Jika Anda menerima pesan kesalahan **DNS name label not available** setelah penyebaran, tentukan label nama DNS yang berbeda (ganti xxxx) dan sebarkan kembali. 
+    
+    **Catatan**: Kontainer Anda akan dapat dijangkau publik di dns-name-label.region.azurecontainer.io. Jika Anda menerima pesan kesalahan **DNS name label not available** setelah penyebaran, tentukan label nama DNS yang berbeda (gantilah xxxx) dan sebarkan kembali. 
 
 5. Klik **Review and Create** untuk memulai proses validasi otomatis.
 
@@ -47,7 +52,7 @@ Dalam tugas ini, kita akan membuat instans kontainer baru untuk aplikasi web.
 7. Pantau halaman penyebaran dan **Notifications**. 
 
 
-# Tugas 2: Memverifikasi penyebaran innstans kontainer
+# <a name="task-2-verify-deployment-of-the-container-instance"></a>Tugas 2: Memverifikasi penyebaran innstans kontainer
 
 Dalam tugas ini, kita memverifikasi bahwa instans kontainer sedang berjalan dengan memastikan bahwa halaman selamat datang ditampilkan.
 
@@ -57,13 +62,13 @@ Dalam tugas ini, kita memverifikasi bahwa instans kontainer sedang berjalan deng
 
 3. Temukan Nama Domain yang Sepenuhnya Memenuhi Syarat (FQDN).
 
-	![Cuplikan layar dari panel gambaran umum untuk kokntainer yang baru dibuat di portal Microsoft Azure, dengan FQDN yang disorot. ](../images/0202.png)
+    ![Cuplikan layar dari panel gambaran umum untuk kokntainer yang baru dibuat di portal Microsoft Azure, dengan FQDN yang disorot. ](../images/0202.png)
 
-2. Salin FQDN kontainer ke tab browser web baru dan tekan **Enter**. Halaman Selamat Datang akan ditampilkan. 
+2. Salin FQDN kontainer ke tab browser web yang baru dan tekan **Enter**. Halaman Selamat Datang akan ditampilkan. 
 
-	![Cuplikan layar pesan selamat datang ACI yang ditampilkan di browser web.](../images/0203.png)
+    ![Cuplikan layar pesan selamat datang ACI yang ditampilkan di browser web.](../images/0203.png)
 
 
-**Selamat!** Anda telah menggunakan Portal Microsoft Azure untuk menyebarkan aplikasi ke kontainer di Azure Container Instances.
+**Selamat!** Anda telah berhasil menggunakan Portal Microsoft Azure untuk menyebarkan aplikasi ke kontainer di Azure Container Instances.
 
-**Catatan**: Untuk menghindari biaya tambahan, Anda dapat secara opsional menghapus grup sumber daya ini. Telusuri grup sumber daya, klik grup sumber daya, lalu klik **Delete resource group**. Verifikasi nama grup sumber daya, lalu klik **Delete**. Pantau **Notifications** untuk melihat bagaimana proses penghapusan.
+**Catatan**: Untuk menghindari biaya tambahan, Anda dapat memilih untuk menghapus grup sumber daya ini. Telusuri grup sumber daya, klik grup sumber daya, lalu klik **Delete resource group**. Verifikasi nama grup sumber daya, lalu klik **Delete**. Pantau **Notifications** untuk melihat bagaimana proses penghapusan.

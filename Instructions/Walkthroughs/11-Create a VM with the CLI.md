@@ -1,33 +1,39 @@
 ---
 wts:
-    title: '11 - Membuat komputer virtual dengan CLI (10 mnt)'
-    module: 'Modul 03: Menjelaskan solusi inti dan alat manajemen'
+  title: 11 - Membuat VM dengan CLI (10 mnt)
+  module: 'Module 03: Describe core solutions and management tools'
+ms.openlocfilehash: 6e88e520011ccf4f1d02fd14038a457226492082
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: id-ID
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137908001"
 ---
-# 11 - Membuat VM dengan CLI (10 mnt)
+# <a name="11---create-a-vm-with-the-cli-10-min"></a>11 - Membuat VM dengan CLI (10 mnt)
 
 Dalam panduan ini, kita akan mengonfigurasi Cloud Shell, menggunakan modul Azure CLI untuk membuat grup sumber daya dan komputer virtual, serta meninjau rekomendasi Azure Advisor. 
 
-# Tugas 1: Mengonfigurasi Cloud Shell 
+# <a name="task-1-configure-the-cloud-shell"></a>Tugas 1: Mengonfigurasi Cloud Shell 
 
-Dalam tugas ini, kita akan menggunakan Cloud Shell., lalu Azure CLI untuk membuat grup sumber daya dan komputer virtual.  
+Dalam tugas ini, kita akan mengonfigurasi Cloud Shell, lalu menggunakan Azure CLI untuk membuat grup sumber daya dan komputer virtual.  
 
 1. Masuk ke [portal Microsoft Azure](https://portal.azure.com).
 
-2. Dari portal Microsoft Azure, buka **Azure Cloud Shell** dengan mengklik ikon di kanan atas Portal Microsoft Azure.
+2. Dari portal Microsoft Azure, buka **Azure Cloud Shell** dengan mengklik ikon di sebelah kanan atas Portal Microsoft Azure.
 
     ![Cuplikan layar ikon Portal Microsoft Azure, Azure Cloud Shell.](../images/1002.png)
    
-3. Di dialog Selamat Datang ke Azure Cloud Shell, jika diminta untuk memilih **Bash** atau **PowerShell**, pilih **Bash**. 
+3. Di dialog Selamat Datang ke Azure Cloud Shell, saat diminta untuk memilih **Bash** atau **PowerShell**, pilihlah **Bash**. 
 
-4. Jendela baru akan terbuka yang menyatakan **Anda tidak memiliki penyimpanan yang dimuat**. Pilih **advanced settings**.
+4. Sebuah jendela baru akan terbuka yang menyatakan **You have no storage mounted**. Pilih **advanced settings**.
 
 5. Di layar pengaturan lanjutan, isi bidang berikut, lalu klik Buat Penyimpanan.
-    - Resource Group **Buat nama grup sumber daya baru**
+    - Resource Group: **Membuat grup sumber daya baru**
     - Storage Account: Buat akun baru menggunakan nama yang unik secara global (mis. cloudshellxyzstorage)
     - File Share: Buat yang baru dan beri nama cloudshellfileshare
 
 
-# Tugas 2: Menggunakan CLI untuk membuat komputer virtual.
+# <a name="task-2-use-cli-to-create-a-virtual-machine"></a>Tugas 2: Menggunakan CLI untuk membuat komputer virtual
 
 Dalam tugas ini, kita akan menggunakan Azure CLI untuk membuat grup sumber daya dan komputer virtual.
 
@@ -42,7 +48,7 @@ Dalam tugas ini, kita akan menggunakan Azure CLI untuk membuat grup sumber daya 
     az group list --output table
     ```
 
-4. Di Cloud Shell, masukkan perintah di bawah dan pastikan bahwa setiap baris, kecuali yang terakhir, diikuti oleh karakter garis miring terbalik (`\`). Jika Anda mengetik seluruh perintah pada baris yang sama, jangan gunakan karakter garis miring terbalik apa pun. 
+4. Di Cloud Shell masukkan perintah di bawah ini dan pastikan bahwa setiap baris, kecuali yang terakhir, diikuti oleh karakter garis miring terbalik (`\`). Jika Anda mengetik seluruh perintah pada baris yang sama, jangan gunakan karakter garis miring terbalik apa pun. 
 
     ```cli
     az vm create \
@@ -54,7 +60,7 @@ Dalam tugas ini, kita akan menggunakan Azure CLI untuk membuat grup sumber daya 
     --admin-password Pa$$w0rd1234
     ```
 
-    >**Catatan**: Jika Anda menggunakan baris perintah di komputer Windows, ganti karakter garis miring terbalik (`\`) dengan karakter tanda sisipan (`^`).
+    >**Catatan**: Jika Anda menggunakan baris perintah di komputer Windows, ganti karakter garis miring terbalik (`\`) dengan karakter sisipan (`^`).
 
     **Catatan**: Perintah ini akan memerlukan waktu 2 hingga 3 menit hingga selesai. Perintah tersebut akan membuat komputer virtual dan berbagai sumber daya yang terkait dengan perintah seperti penyimpanan, jaringan, dan sumber daya keamanan. Jangan lanjutkan ke langkah berikutnya hingga penyebaran komputer virtual selesai. 
 
@@ -65,7 +71,7 @@ Dalam tugas ini, kita akan menggunakan Azure CLI untuk membuat grup sumber daya 
     ![Cuplikan layar halaman komputer virtual dengan myVMPS dalam status berjalan.](../images/1101.png)
 
 
-# Tugas 3: Menjalankan perintah di Cloud Shell
+# <a name="task-3-execute-commands-in-the-cloud-shell"></a>Tugas 3: Menjalankan perintah di Cloud Shell
 
 Dalam tugas ini, kita akan berlatih menjalankan perintah CLI dari Cloud Shell. 
 
@@ -91,7 +97,7 @@ Dalam tugas ini, kita akan berlatih menjalankan perintah CLI dari Cloud Shell.
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-# Tugas 4: Meninjau Rekomendasi Azure Advisor
+# <a name="task-4-review-azure-advisor-recommendations"></a>Tugas 4: Meninjau Rekomendasi Azure Advisor
 
 Dalam tugas ini, kita akan meninjau rekomendasi Azure Advisor.
 
@@ -105,7 +111,7 @@ Dalam tugas ini, kita akan meninjau rekomendasi Azure Advisor.
 
 3. Pilih **All recommendations** dan luangkan waktu untuk melihat setiap rekomendasi dan tindakan yang disarankan. 
 
-    **Catatan:** Bergantung pada sumber daya, rekomendasi Anda akan berbeda. 
+    **Catatan:** Bergantung pada sumber daya Anda, rekomendasinya akan berbeda. 
 
     ![Cuplikan layar halaman Semua rekomendasi Advisor. ](../images/1104.png)
 
@@ -117,4 +123,4 @@ Dalam tugas ini, kita akan meninjau rekomendasi Azure Advisor.
 
 Selamat! Anda telah mengonfigurasi Cloud Shell, membuat komputer virtual menggunakan Azure CLI, berlatih dengan perintah Azure CLI, dan melihat rekomendasi Advisor.
 
-**Catatan**: Untuk menghindari biaya tambahan, Anda dapat secara opsional menghapus grup sumber daya ini. Telusuri grup sumber daya, klik grup sumber daya, lalu klik **Delete resource group**. Verifikasi nama grup sumber daya, lalu klik **Delete**. Pantau **Notifications** untuk melihat bagaimana proses penghapusan.
+**Catatan**: Untuk menghindari biaya tambahan, Anda dapat memilih untuk menghapus grup sumber daya ini. Telusuri grup sumber daya, klik grup sumber daya, lalu klik **Delete resource group**. Verifikasi nama grup sumber daya, lalu klik **Delete**. Pantau **Notifications** untuk melihat bagaimana proses penghapusan.

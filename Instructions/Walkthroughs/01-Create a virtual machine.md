@@ -2,12 +2,12 @@
 wts:
   title: 01 - Membuat komputer virtual di portal (10 mnt)
   module: Module 02 - Core Azure Services (Workloads)
-ms.openlocfilehash: 2e2a613f965d41405b025166876b28be391f10d8
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.openlocfilehash: 010d6a19a66f6ac92627720379a4eb850b2ee423
+ms.sourcegitcommit: 4a0bfef63f98844f16e2a364d156e96382b8fac5
 ms.translationtype: HT
 ms.contentlocale: id-ID
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137907884"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "144556870"
 ---
 # <a name="01---create-a-virtual-machine-in-the-portal-10-min"></a>01 - Membuat komputer virtual di portal (10 mnt)
 
@@ -18,7 +18,7 @@ Dalam panduan ini, kita akan membuat komputer virtual di portal Microsoft Azure,
 # <a name="task-1-create-the-virtual-machine"></a>Tugas 1: Membuat komputer virtual 
 1. Masuk ke portal Microsoft Azure: **https://portal.azure.com**
 
-3. Dari bilah **All services** di Menu Portal, cari dan pilih **Virtual machines**, lalu klik **+Add, +Create, +New** dan pilih **+Virtual machine** dari menu tarik-turun.
+3. Dari bilah **Semua layanan** di Menu Portal, cari dan pilih **Mesin virtual**, lalu klik **+Buat** dan pilih **+Mesin virtual Azure** dari menu drop-down.
 
 4. Pada tab **Basics**, isi informasi berikut (biarkan default untuk yang lainnya):
 
